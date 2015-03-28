@@ -245,6 +245,26 @@
 % HR
 \subsection{Subsystem Architecture}
 % SM
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6in]{subsys_arch.png}
+    \caption{Use Case Diagram}
+\end{figure}
+The two primary subsystems of Anttris are the puzzle-solving system and the online system.
+
+The puzzle-solving system is composed generically over a puzzle viewer and attached event
+handling that allows interaction with the puzzle. Both offline games and online ones use 
+the puzzle viewer, as does the unique puzzle-editing mode. The puzzle viewer is used by
+all three unique modes, and works with our 3D model interaction system to provide
+interactibility. This system is built on the Godot 3d Engine, which uses OpenGL.
+
+The online system breaks down immediately into host mode or remote client mode. The host 
+mode interfaces with the application-generic session-host system, which works in conjunction
+with the session lobby to facilitate remote clients to connect and play against the host. 
+Remote clients also work closely with the session lobby to find hosts to play against. Both
+the session lobby and the session-host system work with the Godot Online Subsystem to provide
+connectivity. The Godot Online Subsystem is built over tcp-udp/ip.
+
 \subsection{Deployment Model}
 % HR
 \section{Use Case Realization Design}
