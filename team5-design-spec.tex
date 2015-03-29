@@ -279,7 +279,7 @@ Anttris will follow industry standards meaning that it needs to look visually pl
     \includegraphics[width=6in]{subsys_arch.png}
     \caption{Use Case Diagram}
 \end{figure}
-The two primary subsystems of Anttris are the puzzle-solving system and the online system.
+The two primary subsystems of Anttris are the puzzle system and the online system.
 
 The puzzle-solving system is composed generically over a puzzle viewer and attached event
 handling that allows interaction with the puzzle. Both offline games and online ones use 
@@ -298,10 +298,21 @@ connectivity. The Godot Online Subsystem is built over tcp-udp/ip.
 % HR
 \section{Use Case Realization Design}
 % HR, I did Use Cases last time, I can work on all of this
-\section{Subsystem Design}
-% I will work on all of this section (Section 5) CA
-\subsection{Subsystem A}
-% CA
+\section{Subsystem Design} % CA
+Anttris is broken down into the following four subsytems: GUI, Networking, File Manager and Game.
+\subsection{Anttris GUI} % CA
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{Anttris_GUIClass.png}
+        \caption{Class diagram for the GUI subsystem.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{Anttris_GUISequence.png}
+        \caption{Sequence diagram for the GUI subsystem.}
+    \end{figure}
+    
+This subsystem manages all of the graphical user interfaces that make up the menus. Menus all inherit GUIBase to provide smooth and consistent fade in and slide out animations. The MenuCreator just takes all of the buttons in a menu and orders them nicely for consistency. The menus themselves will be object instances of GUIBase.
 \subsection{Subsystem B}
 % CA
 \section{Human Interfaces}
