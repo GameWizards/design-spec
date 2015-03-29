@@ -313,8 +313,24 @@ Anttris is broken down into the following four subsytems: GUI, Networking, File 
     \end{figure}
     
 This subsystem manages all of the graphical user interfaces that make up the menus. Menus all inherit GUIBase to provide smooth and consistent fade in and slide out animations. The MenuCreator just takes all of the buttons in a menu and orders them nicely for consistency. The menus themselves will be object instances of GUIBase.
-\subsection{Subsystem B}
-% CA
+
+\subsection{Anttris Network Manager} % CA
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=2.7in]{Anttris_NetworkingClass.png}
+        \caption{Class diagram for the networking subsystem.}
+    \end{figure}
+    
+This subsystem will provide a central interface for networking. All games that are joined or hosted for competitive play will go through this subsystem. It updates the connection periodically and updates the opponents grid on the screen when they make new moves. This subsystem has no sequence diagram as it is self contained and is only used by outside subsystems. See the sequence diagrams for the GUI and game subsystems.
+
+\subsection{Anttris File Manager} % CA
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=4.27in]{Anttris_FileClass.png}
+        \caption{Class diagram for the networking subsystem.}
+    \end{figure}
+    
+This subsystem will provide a central interface for file management. Options will be loaded and saved from here as well as any puzzles created in the editor.
 \section{Human Interfaces}
 % SM, I will work on all of this section (Section 6), I already have most of the UI design done already CA
 \section{System/Data Dependencies \& Requirements}
