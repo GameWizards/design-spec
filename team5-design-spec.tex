@@ -324,6 +324,15 @@ Anttris is broken down into the following four subsytems: GUI, Networking, File 
 
 This subsystem manages all of the graphical user interfaces that make up the menus. Menus all inherit GUIBase to provide smooth and consistent fade in and slide out animations. The MenuCreator just takes all of the buttons in a menu and orders them nicely for consistency. The menus themselves will be object instances of GUIBase.
 
+\subsection{Anttris Game Engine} % CA
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{Anttris_GameClass.png}
+        \caption{Class diagram for the game subsystem.}
+    \end{figure}
+    
+This subsystem manages all of the game and editor states. The game and editor are similar with minor differences in input. This subsystem handles both single player and competitive modes.
+
 \subsection{Anttris Network Manager} % CA
     \begin{figure}[H]
         \centering
