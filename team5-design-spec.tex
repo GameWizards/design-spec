@@ -272,6 +272,34 @@ Anttris will follow industry standards meaning that it needs to look visually pl
 
 \section{Architectural Design}
 % HR
+% Briefly overview your architectural design. Discuss alternatives examined. Indicate why the
+% architecture discussed in section 3.1 & 3.2 was chosen and why the alternatives were eliminated.
+
+We chose the file-system to save persistent data, a single game program with
+both client and host modes, and the Godot Engine for most tasks.
+
+The file-system is the easiest and most portable method to save data. It is
+suited to the game's few storage requirements. We only need to save scores,
+custom levels and settings.
+
+The user decides at the game menu whether to host a game or join a game, this
+dynamic approach is convenient for the user; a dedicated server
+would be too difficult for this casual game. A peer-to-peer solution would
+also be easy for the user, but Godot has better support for the Server/Client
+model.
+
+We also considered using Unity, Ogre, Irlicht, and THREE.js for our
+game. All of these game engines can generate portable exrecutables, but Godot
+was chosen thanks to its multi-platform development environment, unlike Unity;
+a complete set of libraries, unlike Irlicht and Ogre; speed of execution,
+unlike THREE.js. Only THREE.js and Godot support mobile platforms.
+THREE.js and Unity were the closest contenders.
+
+not javascript THREE.JS, unity
+godot is faster than THREE.js and more portable than unity
+also very complete, so no writing stuff from scratch (deadlines!)
+
+
 \subsection{Subsystem Architecture}
 % SM
 \begin{figure}[H]
@@ -298,7 +326,8 @@ connectivity. The Godot Online Subsystem is built over tcp-udp/ip.
 % HR
 We have a simple deployment scheme: install the same game on compatible systems
 and allow the user to dynamically choose the session type. There will be
-one host machine and zero or more client machines.
+one host machine and zero or more client machines. A game in offline mode is
+treated as a host machine.
     \begin{figure}[H]
         \centering
         \includegraphics[width=6in]{deployment_diagram.png}
@@ -330,7 +359,7 @@ This subsystem manages all of the graphical user interfaces that make up the men
         \includegraphics[width=6in]{Anttris_GameClass.png}
         \caption{Class diagram for the game subsystem.}
     \end{figure}
-    
+
 This subsystem manages all of the game and editor states. The game and editor are similar with minor differences in input. This subsystem handles both single player and competitive modes.
 
 \subsection{Anttris Network Manager} % CA
