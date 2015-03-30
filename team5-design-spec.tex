@@ -296,6 +296,16 @@ connectivity. The Godot Online Subsystem is built over tcp-udp/ip.
 
 \subsection{Deployment Model}
 % HR
+We have a simple deployment scheme: install the same game on compatible systems
+and allow the user to dynamically choose the session type. There will be
+one host machine and zero or more client machines.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{deployment_diagram.png}
+        \caption{Deployment diagram. Installation is the same for both host and
+        client. The type of session is chosen dynamically by the user}
+    \end{figure}
+
 \section{Use Case Realization Design}
 % HR, I did Use Cases last time, I can work on all of this
 \section{Subsystem Design} % CA
@@ -363,9 +373,9 @@ This subsystem will provide a central interface for file management. Options wil
         \caption{Options menu design.}
     \end{figure}
 \section{System/Data Dependencies \& Requirements}
-In order for a user to play Anttris, the user will need a personal computer with a modern graphics card, a mouse, and keyboard. The Computer need to be running either Windows, Mac, or Linux operating system that is up to date in order to play the game. 
+In order for a user to play Anttris, the user will need a personal computer with a modern graphics card, a mouse, and keyboard. The Computer need to be running either Windows, Mac, or Linux operating system that is up to date in order to play the game.
 The graphics card needs to be fairly recent in model since it will need to be able to handle a minimum of 30 frames per second with a maximum of 60 frames per second.
-The mouse and keyboard will be used by the user in order to input actions in the game. 
+The mouse and keyboard will be used by the user in order to input actions in the game.
 
 A user may also choose to play Anttris on a mobile device, in which the device needs to be a smart phone running either the Android or iOS operating system. The phone's operating system will need to be up to date in order to play the game effectively. The touch screen of the device will be used to input commands into the game.
 
@@ -401,7 +411,7 @@ Test Single-Player Mode:
 Once we know all the menu options work correctly, we will test the Single-Player Game Mode. In Single-player, the user will be able to select whether they wish to start a new game or continue a game they left off on. The New Game option will allow the user to select the puzzle they wish to play and solve that puzzle from the beginning. In order to test this option, we will have a set number of puzzles generated and we will test each puzzle separately on each machine. We want to make sure that the puzzle generates the correct puzzle and generates the same way each time. After testing the new game function, we will test the continue function. This function allows the user to continue from a saved game file and will allow the user to continue solving the puzzle.
 
 Test Puzzle Editor/Creator:
-After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the Single-Player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid. 
+After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the Single-Player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid.
 Testing the edit puzzle option is similar to the create new puzzle option, except when editing a puzzle we need to make sure that the puzzle the user wishes to edit appears correctly so the user can make the proper changes.
 
 Solving Puzzles:
@@ -412,8 +422,8 @@ Multiplayer Game Mode will be the last thing we test since it involves the inter
 
 After testing the interface of the game and making sure each of the game options and modes work correctly, we will review errors and bugs we encountered during the Black Box testing. Upon completion we will need to begin White Box testing and testing that the correct values are being passed in the code.
 
-The second part of the testing plan, we will be using the White Box testing method in which we will be dealing with the actual code of the game. We need to make sure that the code of the game is working correctly. 
-Changes to the code will be based on the errors and bugs we find during the black box testing. We will be treating the code as units and fixing only the function or object that needs fixing then reintegrating it back into the code. After reintegrating the newly fixed code, we will need to test the section of the game that we made changes to. For instance if we need to make changes to the way a tool works in the puzzle creator, we will make the change to the tool and test only the puzzle creator section of the game. 
+The second part of the testing plan, we will be using the White Box testing method in which we will be dealing with the actual code of the game. We need to make sure that the code of the game is working correctly.
+Changes to the code will be based on the errors and bugs we find during the black box testing. We will be treating the code as units and fixing only the function or object that needs fixing then reintegrating it back into the code. After reintegrating the newly fixed code, we will need to test the section of the game that we made changes to. For instance if we need to make changes to the way a tool works in the puzzle creator, we will make the change to the tool and test only the puzzle creator section of the game.
 By making changes and fixing problems with the documented bugs and errors, and breaking the code into units, we will be able to efficiently make the necessary changes to the game. Once a group of changes have been made, we will test the game again using black box testing in order to make sure that the changes we made to the game did not affect any of the other section of the game. If any errors or bugs are found, they will be documented and recorded and any necessary changes will be made, and they will be tested again on the physical machine. After these changes have been implemented and test effectively, we will move on to the next stage of testing; user testing.
 
 The last part of our testing plan is user testing. User testing will allow for varying users to test the game and provide feedback about the game. This method of testing will help us gather information and discovery any bugs or errors that we could not find during the earlier parts of testing. For this part, we will ask a variety of users to test the game and fill out a survey generated by us. A few of the questions on the survey will ask about how the complexity, enjoyability, functionality, of the game and if the user came across any bugs or errors while playing the game. Using the survey, we can make any changes necessary to ensure the game is fully functional and working properly before we present our final product.
