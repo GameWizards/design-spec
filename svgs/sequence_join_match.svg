@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="sequence_join_match.svg"
-   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/requirements-spec/pngs/sequence_join_match.png"
-   inkscape:export-xdpi="400"
-   inkscape:export-ydpi="400">
+   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/design-spec/pngs/sequence_join_match.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200">
   <defs
      id="defs4631">
     <marker
@@ -43,12 +43,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="248.10579"
-     inkscape:cy="123.99741"
+     inkscape:cx="277.3915"
+     inkscape:cy="243.28312"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="958"
+     inkscape:window-width="1361"
      inkscape:window-height="1061"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -373,20 +373,25 @@
          y="262.07755"
          x="459.63364"
          sodipodi:role="line"
-         id="tspan6550" /><tspan
+         id="tspan3494">(from GameEngine)</tspan><tspan
          style="font-size:7px;text-align:center;text-anchor:middle"
          y="270.82755"
+         x="459.63364"
+         sodipodi:role="line"
+         id="tspan6550" /><tspan
+         style="font-size:7px;text-align:center;text-anchor:middle"
+         y="279.57755"
          x="459.63364"
          sodipodi:role="line"
          id="tspan6463" /><tspan
          id="tspan6465"
          style="font-size:7px"
-         y="279.57755"
+         y="288.32755"
          x="459.63364"
          sodipodi:role="line" /><tspan
          style="font-size:7px"
          id="tspan6467"
-         y="288.32755"
+         y="297.07755"
          x="459.63364"
          sodipodi:role="line" /></text>
     <path

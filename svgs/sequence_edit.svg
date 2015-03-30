@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="sequence_edit.svg"
-   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/requirements-spec/pngs/sequence_edit.png"
-   inkscape:export-xdpi="400"
-   inkscape:export-ydpi="400">
+   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/design-spec/pngs/sequence_edit.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200">
   <defs
      id="defs4631">
     <marker
@@ -43,12 +43,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="248.92719"
-     inkscape:cy="238.69544"
+     inkscape:cx="298.68806"
+     inkscape:cy="180.31201"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1361"
+     inkscape:window-width="1918"
      inkscape:window-height="1061"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -61,7 +61,7 @@
      inkscape:guide-bbox="true">
     <sodipodi:guide
        orientation="0,1"
-       position="122.22846,264.25237"
+       position="542.14286,262.14286"
        id="guide6365" />
     <sodipodi:guide
        orientation="0,1"
@@ -90,7 +90,7 @@
        transform="translate(29.235236,-4.6767701)"
        style="stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none">
       <path
-         d="m 25.885159,47.386669 a 7.4498749,7.4498749 0 1 1 -14.89975,0 7.4498749,7.4498749 0 1 1 14.89975,0 z"
+         d="m 25.885159,47.386669 c 0,4.114452 -3.335423,7.449875 -7.449875,7.449875 -4.114453,0 -7.449875,-3.335423 -7.449875,-7.449875 0,-4.114452 3.335422,-7.449875 7.449875,-7.449875 4.114452,0 7.449875,3.335423 7.449875,7.449875 z"
          sodipodi:ry="7.4498749"
          sodipodi:rx="7.4498749"
          sodipodi:cy="47.386669"
@@ -355,12 +355,14 @@
        x="397.46573"
        y="80.143623"
        id="text7221"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="3.5714286"
+       inkscape:transform-center-y="3.387207"><tspan
          sodipodi:role="line"
          x="397.46573"
          y="80.143623"
          id="tspan7223"
-         style="font-size:7px;text-align:center;text-anchor:middle">GridManager</tspan></text>
+         style="font-size:7px;text-align:center;text-anchor:middle">GridMan</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path7225"
@@ -389,12 +391,12 @@
          y="309.80057"
          x="340.37619"
          sodipodi:role="line"
-         id="tspan7249"></tspan><tspan
+         id="tspan7249" /><tspan
          style="font-size:7px;text-align:center;text-anchor:middle"
          y="318.55057"
          x="340.37619"
          sodipodi:role="line"
-         id="tspan7251"></tspan><tspan
+         id="tspan7251" /><tspan
          style="font-size:7px;text-align:center;text-anchor:middle"
          y="327.30057"
          x="340.37619"
@@ -642,12 +644,12 @@
          sodipodi:role="line"
          x="356.09048"
          y="371.94342"
-         style="font-size:7px;text-align:center;text-anchor:middle"></tspan><tspan
+         style="font-size:7px;text-align:center;text-anchor:middle" /><tspan
          id="tspan7474"
          sodipodi:role="line"
          x="356.09048"
          y="380.69342"
-         style="font-size:7px;text-align:center;text-anchor:middle"></tspan><tspan
+         style="font-size:7px;text-align:center;text-anchor:middle" /><tspan
          id="tspan7476"
          sodipodi:role="line"
          x="356.09048"

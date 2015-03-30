@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="sequence_navigate_puzzle.svg"
-   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/requirements-spec/pngs/sequence_navigate_puzzle.png"
-   inkscape:export-xdpi="400"
-   inkscape:export-ydpi="400">
+   inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/design-spec/pngs/sequence_navigate_puzzle.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200">
   <defs
      id="defs4631">
     <marker
@@ -43,12 +43,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="358.83663"
-     inkscape:cy="124.30296"
+     inkscape:cx="317.40806"
+     inkscape:cy="299.30296"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="958"
+     inkscape:window-width="1361"
      inkscape:window-height="1061"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -185,12 +185,12 @@
          sodipodi:role="line"
          x="153.49255"
          y="76.608086"
-         style="font-size:7px;text-align:center;text-anchor:middle">Event catcher</tspan><tspan
+         style="font-size:7px;text-align:center;text-anchor:middle">Input</tspan><tspan
          sodipodi:role="line"
          x="153.49255"
          y="85.358086"
          style="font-size:7px;text-align:center;text-anchor:middle"
-         id="tspan5906">(Godot object)</tspan><tspan
+         id="tspan5906">(from Godot Lib)</tspan><tspan
          id="tspan5860"
          sodipodi:role="line"
          x="153.49255"
