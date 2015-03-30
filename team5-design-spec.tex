@@ -324,6 +324,15 @@ Anttris is broken down into the following four subsytems: GUI, Networking, File 
 
 This subsystem manages all of the graphical user interfaces that make up the menus. Menus all inherit GUIBase to provide smooth and consistent fade in and slide out animations. The MenuCreator just takes all of the buttons in a menu and orders them nicely for consistency. The menus themselves will be object instances of GUIBase.
 
+\subsection{Anttris Game Engine} % CA
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{Anttris_GameClass.png}
+        \caption{Class diagram for the game subsystem.}
+    \end{figure}
+    
+This subsystem manages all of the game and editor states. The game and editor are similar with minor differences in input. This subsystem handles both single player and competitive modes.
+
 \subsection{Anttris Network Manager} % CA
     \begin{figure}[H]
         \centering
@@ -382,6 +391,8 @@ The mouse and keyboard will be used by the user in order to input actions in the
 A user may also choose to play Anttris on a mobile device, in which the device needs to be a smart phone running either the Android or iOS operating system. The phone's operating system will need to be up to date in order to play the game effectively. The touch screen of the device will be used to input commands into the game.
 
 In order for the user to play multiplayer matches, the user will need an internet connection and IP address for their personal computer or mobile phone in order to connect to the other user. The user can still play the game in Single-Player mode which does not require internet access, however game play will be limited.
+
+Anttris will need to be able to make changes to the save data and scores for each of the puzzles, as well as create new files in order to save puzzles from the Puzzle Editor and to save the current state of games in order for the user to be able to continue where they left off in a later game.
 % ST, BC
 \section{Testing Plan}
 
