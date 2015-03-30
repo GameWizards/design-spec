@@ -345,18 +345,46 @@ with no clients, no further elaboration is needed for that. The Quit use case
 is trivial.
 
 \subsection{Sequence Diagrams}
-\foreach \n in
-{sequence_edit.png, sequence_join_match.png, sequence_offline_play.png,
-sequence_solve.png, sequence_host_match.png, sequence_navigate_puzzle.png,
-sequence_quit.png}
+\foreach \n/\desc in {
+{{sequence_edit.png%
+}/{Sequence Diagram for editing a puzzle}},
+{{sequence_join_match.png%
+}/{Sequence Diagram for joining a match    }},
+{{sequence_solve.png%
+}/{Sequence Diagram for solving a puzzle  }},
+{{sequence_host_match.png%
+}/{Sequence Diagram for hosting a match  }},
+{{sequence_navigate_puzzle.png%
+}/{Sequence Diagram  for navigating the puzzle}}}
 {
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{\n}\par
+        \caption{\desc}
     \end{figure}
 }
 
 \subsection{Class Diagrams}
+
+\foreach \n/\desc in {
+{{class_edit.png%
+}/{UML Class diagram for the puzzle editing Use Case. Notice TestGame is used
+to start a new GameEngine to test the current puzzle.}},
+{{class_join.png%
+}/{UML Class diagram for a client joining a game.}},
+{{class_solve.png%
+}/{UML Class diagram for solving the game. }},
+{{class_host.png%
+}/{UML Class diagram for hosting a game.}},
+{{class_navigate.png%
+}/{UML Class diagram for navigating the puzzle.}}}
+{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{\n}\par
+        \caption{\desc}
+    \end{figure}
+}
 
 \section{Subsystem Design} % CA
 Anttris is broken down into the following four subsytems: GUI, Networking, File Manager and Game.
