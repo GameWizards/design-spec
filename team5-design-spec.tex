@@ -96,7 +96,7 @@ Anttris will follow industry standards meaning that it needs to look visually pl
                 \item This Puzzle Selector will create a Puzzle Scene
                 \item The scene will change from the main menu to the Puzzle
                     Scene.
-                \item Additional view-ports will be added to the game screen. 
+                \item Additional view-ports will be added to the game screen.
                 These show the progress of online players in an interface
                 similar to the local player's puzzle.
 
@@ -121,7 +121,7 @@ Anttris will follow industry standards meaning that it needs to look visually pl
                 \item This Puzzle Selector will create a Puzzle Scene
                 \item The scene will change from the main menu to the Puzzle
                     Scene.
-                \item Additional view-ports will be added to the game screen. 
+                \item Additional view-ports will be added to the game screen.
                 These show the progress of online players in an interface
                 similar to the local player's puzzle.
             \end{enumerate}
@@ -261,7 +261,7 @@ Anttris will follow industry standards meaning that it needs to look visually pl
                 \item User presses the quit button on a menu
                 \item or User presses appropriate sequence of keys, such as
                     the escape key or the alt and F4 combo.
-                \item Some data may be saved, such as the puzzle being currently 
+                \item Some data may be saved, such as the puzzle being currently
                 edited.
                 \item The program shuts down gracefully.
             \end{enumerate}
@@ -282,14 +282,14 @@ Anttris will follow industry standards meaning that it needs to look visually pl
 The two primary subsystems of Anttris are the puzzle system and the online system.
 
 The puzzle-solving system is composed generically over a puzzle viewer and attached event
-handling that allows interaction with the puzzle. Both offline games and online ones use 
+handling that allows interaction with the puzzle. Both offline games and online ones use
 the puzzle viewer, as does the unique puzzle-editing mode. The puzzle viewer is used by
 all three unique modes, and works with our 3D model interaction system to provide
 interactivity. This system is built on the Godot 3d Engine, which uses OpenGL.
 
-The online system breaks down immediately into host mode or remote client mode. The host 
+The online system breaks down immediately into host mode or remote client mode. The host
 mode interfaces with the application-generic session-host system, which works in conjunction
-with the session lobby to facilitate remote clients to connect and play against the host. 
+with the session lobby to facilitate remote clients to connect and play against the host.
 Remote clients also work closely with the session lobby to find hosts to play against. Both
 the session lobby and the session-host system work with the Godot Online Subsystem to provide
 connectivity. The Godot Online Subsystem is built over tcp-udp/ip.
@@ -311,7 +311,7 @@ Anttris is broken down into the following four subsytems: GUI, Networking, File 
         \includegraphics[width=6in]{Anttris_GUISequence.png}
         \caption{Sequence diagram for the GUI subsystem.}
     \end{figure}
-    
+
 This subsystem manages all of the graphical user interfaces that make up the menus. Menus all inherit GUIBase to provide smooth and consistent fade in and slide out animations. The MenuCreator just takes all of the buttons in a menu and orders them nicely for consistency. The menus themselves will be object instances of GUIBase.
 
 \subsection{Anttris Network Manager} % CA
@@ -320,7 +320,7 @@ This subsystem manages all of the graphical user interfaces that make up the men
         \includegraphics[width=2.7in]{Anttris_NetworkingClass.png}
         \caption{Class diagram for the networking subsystem.}
     \end{figure}
-    
+
 This subsystem will provide a central interface for networking. All games that are joined or hosted for competitive play will go through this subsystem. It updates the connection periodically and updates the opponents grid on the screen when they make new moves. This subsystem has no sequence diagram as it is self contained and is only used by outside subsystems. See the sequence diagrams for the GUI and game subsystems.
 
 \subsection{Anttris File Manager} % CA
@@ -329,7 +329,7 @@ This subsystem will provide a central interface for networking. All games that a
         \includegraphics[width=4.27in]{Anttris_FileClass.png}
         \caption{Class diagram for the networking subsystem.}
     \end{figure}
-    
+
 This subsystem will provide a central interface for file management. Options will be loaded and saved from here as well as any puzzles created in the editor.
 \section{Human Interfaces} % CA / SM
     \begin{figure}[H]
@@ -367,26 +367,28 @@ This subsystem will provide a central interface for file management. Options wil
 \section{Testing Plan}
 8. Testing Plan
 
-In order to test that the game is working properly we will be using Black Box and White Box testing methods. Using these methods we can test the game from the outside-in by making sure that the functionality of the interface preforms the correct actions then working our way to the coding level. This approach will prevent more errors and bugs in the early stages of testing, since we will not be working with the code directly at the start. Any errors and bugs we encounter will be documented and recorded for future reference. 
+In order to test that the game is working properly we will be using Black Box and White Box testing methods. Using these methods we can test the game from the outside-in by making sure that the functionality of the interface preforms the correct actions then working our way to the coding level. This approach will prevent more errors and bugs in the early stages of testing, since we will not be working with the code directly at the start. Any errors and bugs we encounter will be documented and recorded for future reference.
 
 For the first part of the testing plan, we will be testing the game on multiple physical computers to make sure the interface of the game preforms correctly. Testing the game on multiple machines will allow for a diverse testing experience, and will confirm whether or not our game can work on multiple systems. Once we know the game can run on each of the tested machines, we will begin testing the interface of the game.
 The interface of the game is what the user will be interacting with, so we want to make sure that the interactions of each function work correctly and display the correct information to the user. To test the interface of the game we will:
 
-1. Test the menu options
-2. Test Single-Player Game Mode (Single-player, New Game, Continue Game)
-3. Test Puzzle Editor/Creator: (Create, Edit, Delete)
-4. Solve basic test puzzles (Test Puzzle 1, 2, 3,...)
-5. Multiplayer Game Mode
+\begin{enumerate}
+\item Test the menu options
+\item Test Single-Player Game Mode (Single-player, New Game, Continue Game)
+\item Test Puzzle Editor/Creator: (Create, Edit, Delete)
+\item Solve basic test puzzles (Test Puzzle 1, 2, 3,...)
+\item Multiplayer Game Mode
+\end{enumerate}
 
 Testing Menu Options:
-In order to test the menu options, we will click on each of the options and make sure that the selected menu option displays the next options or pages the user needs to see. For instance, if a user selects “single-player game”, we don't want the game pulling up the information for a multiplayer game. 
+In order to test the menu options, we will click on each of the options and make sure that the selected menu option displays the next options or pages the user needs to see. For instance, if a user selects “single-player game”, we don't want the game pulling up the information for a multiplayer game.
 We will be testing each of the options the user may choose from and if the user can reselect options by returning to the previous options. Since this is the first thing the user will see when playing our game, and is what decides what type of games the user will be playing, we can to make sure they work properly and don't cause the game to close unexpectedly.
 
 Test Single-Player Mode:
 Once we know all the menu options work correctly, we will test the Single-Player Game Mode. In Single-player, the user will be able to select whether they wish to start a new game or continue a game they left off on. The New Game option will allow the user to select the puzzle they wish to play and solve that puzzle from the beginning. In order to test this option, we will have a set number of puzzles generated and we will test each puzzle separately on each machine. We want to make sure that the puzzle generates the correct puzzle and generates the same way each time. After testing the new game function, we will test the continue function. This function allows the user to continue from a saved game file and will allow the user to continue solving the puzzle.
 
 Test Puzzle Editor/Creator:
-After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the Single-Player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid. Testing the edit puzzle option is similar to the create new puzzle option, except when editing a puzzle we need to make sure that the puzzle the user wishes to edit appears correctly so the user can make the proper changes. 
+After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the Single-Player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid. Testing the edit puzzle option is similar to the create new puzzle option, except when editing a puzzle we need to make sure that the puzzle the user wishes to edit appears correctly so the user can make the proper changes.
 
 Solving Puzzles:
 After we have tested the Puzzle Editor, we will attempt to solve puzzles. Using per-constructed, basic puzzles, we will solve each of the puzzles and confirm that each of the blocks preforms the correct action when clicked, and test if the game records scores correctly and ends when the goal block is reached. Each of the tester puzzles, will consist of each type of block and possible interactions so we can make sure that the game flow is not ruined when blocks preform their actions. Solving Puzzles is the last step in testing the Single-Player mode and is the most important.
@@ -394,19 +396,19 @@ After we have tested the Puzzle Editor, we will attempt to solve puzzles. Using 
 Multiplayer Game Mode:
 Multiplayer Game Mode will be the last thing we test since it involves the interactions between two computers. We will be testing the Create and Host Match options like we did the menu options and the different game modes similarly to the Single-Player and Multiplayer game modes. The most important thing we need to test for the multiplayer are the interactions between the two players. In order to test the interactions, we need to make sure that two players are able to connect to each other and preform actions in the interface and when solving puzzles with each other.
 
-After testing the interface of the game and making sure each of the game options and modes work correctly, we will review errors and bugs we encountered during the Black Box testing. Upon completion we will need to begin White Box testing and testing that the correct values are being passed in the code. 
+After testing the interface of the game and making sure each of the game options and modes work correctly, we will review errors and bugs we encountered during the Black Box testing. Upon completion we will need to begin White Box testing and testing that the correct values are being passed in the code.
 % ST, BC
 \section{Appendices}
 % ST
 \subsection{Project Status}
 % ST
-The project is coming along nicely. Thanks to this document, we now have a clearer idea for the design of the subsystems of the game. 
+The project is coming along nicely. Thanks to this document, we now have a clearer idea for the design of the subsystems of the game.
 
-We've divided the responsibilities up amongst ourselves roughly as follows: Chris is working with Benji and Skyler on the core game coding (puzzle generation and solving.) Graphics and textures are being worked on by Benji and Chris. Hugo and Skyler are working on the block logic. Testing will be carried out by everyone. Sean is still acting as Scrum master and will be responsible for code quality and documentation. As usual, however, everyone will pitch in where needed. 
+We've divided the responsibilities up amongst ourselves roughly as follows: Chris is working with Benji and Skyler on the core game coding (puzzle generation and solving.) Graphics and textures are being worked on by Benji and Chris. Hugo and Skyler are working on the block logic. Testing will be carried out by everyone. Sean is still acting as Scrum master and will be responsible for code quality and documentation. As usual, however, everyone will pitch in where needed.
 
-Spring break wasn't hugely productive...as we expected...but we've spent some time learning the Godot engine and working on an early version of the game. 
+Spring break wasn't hugely productive...as we expected...but we've spent some time learning the Godot engine and working on an early version of the game.
 
-We are on track to start another sprint this week, which will enable us to hopefully get core functionality working. The plan is to get a core game working. Once that is done, we plan to spend the remaining time in the semester working on advanced features and documentation. 
+We are on track to start another sprint this week, which will enable us to hopefully get core functionality working. The plan is to get a core game working. Once that is done, we plan to spend the remaining time in the semester working on advanced features and documentation.
 
 \bibliographystyle{acm}
 \bibliography{team5-design-spec}
