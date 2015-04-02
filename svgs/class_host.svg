@@ -13,7 +13,7 @@
    height="321.17868"
    id="svg3848"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="class_host.svg"
    inkscape:export-filename="/home/croh/Dropbox/classes/CSE326/design-spec/svgs/class_join.png"
    inkscape:export-xdpi="300.03549"
@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="344.55606"
+     inkscape:cx="347.4132"
      inkscape:cy="95.784394"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -132,9 +132,9 @@
        x="191.67644"
        y="46.646408" />
     <rect
-       y="113.82156"
+       y="76.821564"
        x="191.67644"
-       height="7.7939692"
+       height="44.793968"
        width="109.60155"
        id="rect2997"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
@@ -153,20 +153,25 @@
     <text
        sodipodi:linespacing="125%"
        id="text3007"
-       y="77.686546"
-       x="198.27397"
+       y="87.686546"
+       x="195.41682"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
-         y="77.686546"
-         x="198.27397"
+         y="87.686546"
+         x="195.41682"
          id="tspan3009"
          sodipodi:role="line">+getData</tspan><tspan
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
-         y="91.436546"
-         x="198.27397"
+         y="101.43655"
+         x="195.41682"
          sodipodi:role="line"
-         id="tspan4028">+sendData</tspan></text>
+         id="tspan4028">+sendData</tspan><tspan
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
+         y="115.18655"
+         x="195.41682"
+         sodipodi:role="line"
+         id="tspan3834">+acceptClient</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4030"
@@ -211,9 +216,9 @@
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4042"
        width="109.60155"
-       height="7.7939692"
+       height="37.793968"
        x="364.41254"
-       y="113.82156" />
+       y="83.821564" />
     <text
        sodipodi:linespacing="125%"
        id="text4044"
@@ -229,18 +234,18 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="371.01007"
-       y="77.686546"
+       x="369.58151"
+       y="94.829407"
        id="text4048"
        sodipodi:linespacing="125%"><tspan
          id="tspan4052"
          sodipodi:role="line"
-         x="371.01007"
-         y="77.686546"
+         x="369.58151"
+         y="94.829407"
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono">+showNewMsgs</tspan><tspan
          sodipodi:role="line"
-         x="371.01007"
-         y="91.436546"
+         x="369.58151"
+         y="108.57941"
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
          id="tspan4054" /></text>
     <rect
