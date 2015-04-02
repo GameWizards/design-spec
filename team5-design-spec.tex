@@ -34,7 +34,7 @@ While the two core game modes provide a fun and unique game, Anttris really shin
 \subsection{Scope and Objectives} %CA / HR
 While Anttris is a simple puzzle game, it was designed to be extendable. The core scope of the game involves creating working self-contained executables for many different platforms which include, but are not limited to, PC, Max and Linux. These executables will at the very least contain single-player and competitive online games modes with a working editor. To do this, we are utilizing a game development framework called Godot \cite{godot:gameengine} that provides the basic functionality of a three-dimensional game. A mixture of networking libraries and Godot's networking features will be utilized to complete the competitive game mode which will be done using a peer-to-peer direct connection. Puzzles will be both hand crafted and generated using a custom puzzle generator. To ensure that puzzles created in the editor are solvable, the game will also include a puzzle solver that will quickly and efficiently determine if a generated or editor-created puzzle can be solved.
 
-To further extend the scope, Anttris may include several other features if time permits. These features may include an online server, non-block-shaped puzzles, game result statistics, hiscore list and replay mode. A main server will allow users to randomly connect to opponents instead of using direct connection. Non-block-shaped puzzles will allow for more creative freedom in the editor and give puzzles a fun look. Game result statistics will show how the game played out with a graph of time versus blocks left for the user and their component. A hiscore list will let users see where they rank among their competition throughout the world. Finally, a replay mode will let the user watch a single-player or competitive game, allowing them to see where they need to improve or get tips from opponents.
+To further extend the scope, Anttris may include several other features if time permits. These features may include an online server, non-block-shaped puzzles, game result statistics, hiscore list and replay mode. A main server will allow users to randomly connect to opponents instead of using direct connection. Non-block-shaped puzzles will allow for more creative freedom in the editor and give puzzles a fun look. Game result statistics will show how the game played out with a graph of time versus blocks left for the user and their component. A high-score list will let users see where they rank among their competition throughout the world. Finally, a replay mode will let the user watch a single-player or competitive game, allowing them to see where they need to improve or get tips from opponents.
 
 The main objectives of the project involve:
 \begin{itemize}
@@ -48,7 +48,7 @@ The main objectives of the project involve:
   \item Adding online connections through a client-server setup instead of through peer-to-peer connections.
   \item Adding new competitive and single player game modes based on the same puzzle mechanics, such as 'race the clock' or 'remove all blocks'.
   \item Adding puzzles that are not cube shaped.
-  \item Adding a hiscore board.
+  \item Adding a high-score board.
   \item Adding replays.
   \end{itemize}
 \end{itemize}
@@ -477,15 +477,15 @@ These are not mockups, they are screenshots from the development version.
         \caption{Options menu design.}
     \end{figure}
 \section{System/Data Dependencies \& Requirements}
-In order for a user to play Anttris, the user will need a personal computer with a modern graphics card, a mouse, and keyboard. The Computer need to be running either Windows, Mac, or Linux operating system that is up to date in order to play the game.
-The graphics card needs to be fairly recent in model since it will need to be able to handle a minimum of 30 frames per second with a maximum of 60 frames per second.
-The mouse and keyboard will be used by the user in order to input actions in the game.
+% edited by ST
+In order for a user to play Anttris, the user will need a personal computer with a modern graphics card, a mouse, and keyboard. The computer will need to be a standard x86 machine---running Windows, Mac, or GNU/Linux---that is up to date in order to play the game.
+The graphics card needs to be reasonably modern since it must provide a minimum of 30 frames per second. Most recent desktop and mobile cards should be able to achieve this. The mouse and keyboard are the primary input devices. 
 
-A user may also choose to play Anttris on a mobile device, in which the device needs to be a smart phone running either the Android or iOS operating system. The phone's operating system will need to be up to date in order to play the game effectively. The touch screen of the device will be used to input commands into the game.
+A user may also choose to play Anttris on a mobile device, in which the device is a smart phone, running either the Android or iOS operating system. The phone's operating system will need to be up to date in order to play the game effectively. The touch screen of the device will be used to input commands into the game.
 
-In order for the user to play multiplayer matches, the user will need an internet connection and IP address for their personal computer or mobile phone in order to connect to the other user. The user can still play the game in Single-Player mode which does not require internet access, however game play will be limited.
+In order for the user to play multiplayer matches, the user will need an internet connection and IP address for their personal computer or mobile phone in order to connect to the other user. The user can still play the game in single-player mode which does not require internet access, however game play will be limited.
 
-Anttris will need to be able to make changes to the save data and scores for each of the puzzles, as well as create new files in order to save puzzles from the Puzzle Editor and to save the current state of games in order for the user to be able to continue where they left off in a later game.
+Anttris will need filesystem access in order to create, write, and modify save data and scores for each puzzle. Additionally, the Puzzle Editor will need to be able to read and write data for user-generated puzzles. 
 % ST, BC
 \section{Testing Plan}
 
@@ -503,7 +503,7 @@ The interface of the game is what the user will be interacting with, so we want 
 
 \begin{enumerate}
 \item Test the menu options
-\item Test Single-Player Game Mode (Single-player, New Game, Continue Game)
+\item Test single-player Game Mode (Single-player, New Game, Continue Game)
 \item Test Puzzle Editor/Creator: (Create, Edit, Delete)
 \item Solve basic test puzzles (Test Puzzle 1, 2, 3,...)
 \item Multiplayer Game Mode
@@ -516,17 +516,17 @@ In order to test the menu options, we will click on each of the options and make
 We will be testing each of the options the user may choose from and if the user can reselect options by returning to the previous options. Since this is the first thing the user will see when playing our game, and is what decides what type of games the user will be playing, we can to make sure they work properly and don't cause the game to close unexpectedly.
 
 \subsection{Test Single-Player Mode}
-Once we know all the menu options work correctly, we will test the Single-Player Game Mode. In Single-player, the user will be able to select whether they wish to start a new game or continue a game they left off on. The New Game option will allow the user to select the puzzle they wish to play and solve that puzzle from the beginning. In order to test this option, we will have a set number of puzzles generated and we will test each puzzle separately on each machine. We want to make sure that the puzzle generates the correct puzzle and generates the same way each time. After testing the new game function, we will test the continue function. This function allows the user to continue from a saved game file and will allow the user to continue solving the puzzle.
+Once we know all the menu options work correctly, we will test the single-player Game Mode. In single-player, the user will be able to select whether they wish to start a new game or continue a game they left off on. The New Game option will allow the user to select the puzzle they wish to play and solve that puzzle from the beginning. In order to test this option, we will have a set number of puzzles generated and we will test each puzzle separately on each machine. We want to make sure that the puzzle generates the correct puzzle and generates the same way each time. After testing the new game function, we will test the continue function. This function allows the user to continue from a saved game file and will allow the user to continue solving the puzzle.
 
 \subsection{Test Puzzle Editor/Creator}
-After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the Single-Player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid.
+After we have tested the New Game and Continue functions, we will be testing the puzzle editor functions which are accessed in the single-player Mode. The puzzle editor is where the user can create new puzzles, edit previously made puzzles, and delete puzzles they may not want anymore. In order to test creating new puzzles, we will be creating basic puzzles, seeing if we are allowed to place blocks on the grid correctly, and if the game will catch any errors when saving the puzzle. When creating basic puzzles we will be using the in game tools to create and remove blocks on the grid. We will need to test that we can place each type of block, and be able to remove each type of block when placed on the grid.
 Testing the edit puzzle option is similar to the create new puzzle option, except when editing a puzzle we need to make sure that the puzzle the user wishes to edit appears correctly so the user can make the proper changes.
 
 \subsection{Solving Puzzles}
-After we have tested the Puzzle Editor, we will attempt to solve puzzles. Using per-constructed, basic puzzles, we will solve each of the puzzles and confirm that each of the blocks preforms the correct action when clicked, and test if the game records scores correctly and ends when the goal block is reached. Each of the tester puzzles, will consist of each type of block and possible interactions so we can make sure that the game flow is not ruined when blocks preform their actions. Solving Puzzles is the last step in testing the Single-Player mode and is the most important.
+After we have tested the Puzzle Editor, we will attempt to solve puzzles. Using per-constructed, basic puzzles, we will solve each of the puzzles and confirm that each of the blocks preforms the correct action when clicked, and test if the game records scores correctly and ends when the goal block is reached. Each of the tester puzzles, will consist of each type of block and possible interactions so we can make sure that the game flow is not ruined when blocks preform their actions. Solving Puzzles is the last step in testing the single-player mode and is the most important.
 
 \subsection{Multiplayer Game Mode}
-Multiplayer Game Mode will be the last thing we test since it involves the interactions between two computers. We will be testing the Create and Host Match options like we did the menu options and the different game modes similarly to the Single-Player and Multiplayer game modes. The most important thing we need to test for the multiplayer are the interactions between the two players. In order to test the interactions, we need to make sure that two players are able to connect to each other and preform actions in the interface and when solving puzzles with each other.
+Multiplayer Game Mode will be the last thing we test since it involves the interactions between two computers. We will be testing the Create and Host Match options like we did the menu options and the different game modes similarly to the single-player and Multiplayer game modes. The most important thing we need to test for the multiplayer are the interactions between the two players. In order to test the interactions, we need to make sure that two players are able to connect to each other and preform actions in the interface and when solving puzzles with each other.
 
 \subsection{White Box Testing}
 The second part of the testing plan, we will be using the White Box testing method in which we will be dealing with the actual code of the game. We need to make sure that the code of the game is working correctly.

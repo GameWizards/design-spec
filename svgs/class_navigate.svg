@@ -13,7 +13,7 @@
    height="321.17865"
    id="svg4888"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="class_navigate.svg">
   <defs
      id="defs4890" />
@@ -103,9 +103,9 @@
        x="231.15755"
        y="466.27515" />
     <rect
-       y="506.17618"
+       y="491.17618"
        x="231.15755"
-       height="7.7939692"
+       height="20.79397"
        width="109.60155"
        id="rect2997"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
@@ -124,18 +124,18 @@
     <text
        sodipodi:linespacing="125%"
        id="text3007"
-       y="497.31528"
-       x="237.75508"
+       y="503.37619"
+       x="233.71448"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
-         y="497.31528"
-         x="237.75508"
+         y="503.37619"
+         x="233.71448"
          id="tspan3009"
          sodipodi:role="line">+changeView</tspan><tspan
          style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Luxi Mono;-inkscape-font-specification:Luxi Mono"
-         y="511.06528"
-         x="237.75508"
+         y="517.12622"
+         x="233.71448"
          sodipodi:role="line"
          id="tspan4028" /></text>
     <rect
