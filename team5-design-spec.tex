@@ -7,7 +7,7 @@
 \usepackage{pgffor} % \foreach
 \usepackage[top=1.4in, bottom=1.4in, left=1.4in, right=1.4in]{geometry}
 
-\graphicspath{ {pngs/} }
+\graphicspath{{pngs/}}
 
 \newcommand{\specialcell}[2][c]{%
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
@@ -16,7 +16,7 @@
 \sf % sans serif
 \title{CSE326 Semester Project Design Spec: Anttris\\
 {\Large Team 5}}
-\author{
+\author{%
 \and Chris Aikman
 \and Benji Cope
 \and Skyler Manzanares
@@ -32,7 +32,7 @@ Anttris includes two different game modes: single-player and competitive. Single
 
 While the two core game modes provide a fun and unique game, Anttris really shines when it comes to the ability to create your own puzzles through a built-in editor. Players are also able to use the puzzles they created when playing competitively. The goal of the game is expanded from simply solving a cube faster than your opponent to \textsl{creating} a puzzle that will challenge your opponent while you solve their puzzle first.
 \subsection{Scope and Objectives} %CA / HR
-While Anttris is a simple puzzle game, it was designed to be extendable. The core scope of the game involves creating working self-contained executables for many different platforms which include, but are not limited to, PC, Max and Linux. These executables will at the very least contain single-player and competitive online games modes with a working editor. To do this, we are utilizing a game development framework called Godot \cite{godot:gameengine} that provides the basic functionality of a three-dimensional game. A mixture of networking libraries and Godot's networking features will be utilized to complete the competitive game mode which will be done using a peer-to-peer direct connection. Puzzles will be both hand crafted and generated using a custom puzzle generator. To ensure that puzzles created in the editor are solvable, the game will also include a puzzle solver that will quickly and efficiently determine if a generated or editor-created puzzle can be solved.
+While Anttris is a simple puzzle game, it was designed to be extendable. The core scope of the game involves creating working self-contained executables for many different platforms which include -- but are not limited to -- PC, Max and Linux. These executables will at the very least contain single-player and competitive online games modes with a working editor. To do this, we are utilizing a game development framework called Godot \cite{godot:gameengine} that provides the basic functionality of a three-dimensional game. A mixture of networking libraries and Godot's networking features will be utilized to complete the competitive game mode which will be done using a peer-to-peer direct connection. Puzzles will be both hand crafted and generated using a custom puzzle generator. To ensure that puzzles created in the editor are solvable, the game will also include a puzzle solver that will quickly and efficiently determine if a generated or editor-created puzzle can be solved.
 
 To further extend the scope, Anttris may include several other features if time permits. These features may include an online server, non-block-shaped puzzles, game result statistics, hiscore list and replay mode. A main server will allow users to randomly connect to opponents instead of using direct connection. Non-block-shaped puzzles will allow for more creative freedom in the editor and give puzzles a fun look. Game result statistics will show how the game played out with a graph of time versus blocks left for the user and their component. A high-score list will let users see where they rank among their competition throughout the world. Finally, a replay mode will let the user watch a single-player or competitive game, allowing them to see where they need to improve or get tips from opponents.
 
@@ -46,7 +46,7 @@ The main objectives of the project involve:
  \item Adding additional gameplay mechanics. This involves adding on additional features that we may not have enough time to complete within the project's timeline, but would like to if the base project is completed before scheduled. These ideas involve:
   \begin{itemize}
   \item Adding online connections through a client-server setup instead of through peer-to-peer connections.
-  \item Adding new competitive and single player game modes based on the same puzzle mechanics, such as 'race the clock' or 'remove all blocks'.
+  \item Adding new competitive and single player game modes based on the same puzzle mechanics, such as `race the clock' or `remove all blocks'.
   \item Adding puzzles that are not cube shaped.
   \item Adding a high-score board.
   \item Adding replays.
@@ -350,7 +350,7 @@ with no clients, no further elaboration is needed for that. The Quit use case
 is trivial.
 
 \subsection{Sequence Diagrams}
-\foreach \n/\desc in {
+\foreach \n/\desc in {%
 {{sequence_edit.png%
 }/{Sequence Diagram for editing a puzzle}},
 {{sequence_join_match.png%
@@ -361,7 +361,7 @@ is trivial.
 }/{Sequence Diagram for hosting a match  }},
 {{sequence_navigate_puzzle.png%
 }/{Sequence Diagram  for navigating the puzzle}}}
-{
+{%
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{\n}\par
@@ -371,11 +371,11 @@ is trivial.
 
 \subsection{Class Diagrams}
 
-\foreach \n/\desc in {
+\foreach \n/\desc in {%
 {{class_edit.png%
 }/{UML Class diagram for the puzzle editing Use Case. Notice TestGame is used
 to start a new GameEngine to test the current puzzle.}},
-{{class_join.png
+{{class_join.png%
 }/{UML Class diagram for a client joining a game.}},
 {{class_solve.png%
 }/{UML Class diagram for solving the game. }},
@@ -383,7 +383,7 @@ to start a new GameEngine to test the current puzzle.}},
 }/{UML Class diagram for hosting a game.}},
 {{class_navigate.png%
 }/{UML Class diagram for navigating the puzzle.}}}
-{
+{%
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{\n}\par
@@ -479,13 +479,13 @@ These are not mockups, they are screenshots from the development version.
 \section{System/Data Dependencies \& Requirements}
 % edited by ST
 In order for a user to play Anttris, the user will need a personal computer with a modern graphics card, a mouse, and keyboard. The computer will need to be a standard x86 machine---running Windows, Mac, or GNU/Linux---that is up to date in order to play the game.
-The graphics card needs to be reasonably modern since it must provide a minimum of 30 frames per second. Most recent desktop and mobile cards should be able to achieve this. The mouse and keyboard are the primary input devices. 
+The graphics card needs to be reasonably modern since it must provide a minimum of 30 frames per second. Most recent desktop and mobile cards should be able to achieve this. The mouse and keyboard are the primary input devices.
 
 A user may also choose to play Anttris on a mobile device, in which the device is a smart phone, running either the Android or iOS operating system. The phone's operating system will need to be up to date in order to play the game effectively. The touch screen of the device will be used to input commands into the game.
 
 In order for the user to play multiplayer matches, the user will need an internet connection and IP address for their personal computer or mobile phone in order to connect to the other user. The user can still play the game in single-player mode which does not require internet access, however game play will be limited.
 
-Anttris will need filesystem access in order to create, write, and modify save data and scores for each puzzle. Additionally, the Puzzle Editor will need to be able to read and write data for user-generated puzzles. 
+Anttris will need filesystem access in order to create, write, and modify save data and scores for each puzzle. Additionally, the Puzzle Editor will need to be able to read and write data for user-generated puzzles.
 % ST, BC
 \section{Testing Plan}
 
@@ -505,7 +505,7 @@ The interface of the game is what the user will be interacting with, so we want 
 \item Test the menu options
 \item Test single-player Game Mode (Single-player, New Game, Continue Game)
 \item Test Puzzle Editor/Creator: (Create, Edit, Delete)
-\item Solve basic test puzzles (Test Puzzle 1, 2, 3,...)
+\item Solve basic test puzzles (Test Puzzle 1, 2, 3\dots)
 \item Multiplayer Game Mode
 \end{enumerate}
 
